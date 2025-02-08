@@ -4,7 +4,7 @@ pipeline {
 
     environment {
 
-        myappname = "ntmsapp"
+        myappname = "Random-Password"
     }
 
     stages {
