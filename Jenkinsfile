@@ -63,7 +63,7 @@ stage("Apply") {
             steps {
 
                 echo "Apply the config"
-                 bat 'terraform apply'
+                 bat 'terraform apply --auto-approve'
             }
         }
     }
