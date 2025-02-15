@@ -43,7 +43,17 @@ environment {
                 echo "Validating the config"
                  bat 'terraform validate'
             }
-            
+
+             stage("Plan") {
+            environment {
+                phase = "Plan"
+            }
+
+            steps {
+
+                echo "plan the config"
+                 bat 'terraform plan'
+            }
         }
 
     }
