@@ -41,7 +41,7 @@ environment {
 
             when {
                 // expression { currentBuild.currentResult == 'Success'}
-                 branch 'dev' 
+                 branch 'main' 
             }
 
             environment {
