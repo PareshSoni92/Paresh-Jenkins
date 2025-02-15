@@ -44,7 +44,7 @@ environment {
                  bat 'terraform validate'
             }
         }
-             stage("Plan") {
+        stage("Plan") {
             environment {
                 phase = "Plan"
             }
@@ -55,7 +55,17 @@ environment {
                  bat 'terraform plan'
             }
         }
+stage("Apply") {
+            environment {
+                phase = "Apply"
+            }
 
+            steps {
+
+                echo "Apply the config"
+                 bat 'terraform apply'
+            }
+        }
     }
 
 
