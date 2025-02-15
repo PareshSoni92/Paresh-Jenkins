@@ -38,6 +38,11 @@ environment {
         }
 
         stage("Validate") {
+
+            when {
+                 ${currentBuild.currentResult} 'Success'
+            }
+
             environment {
                 phase = "Validate"
             }
@@ -48,6 +53,7 @@ environment {
                 
                  bat 'terraform validate'
                  echo "${currentBuild.currentResult}"
+            
             }
         }
         stage("Plan") {
