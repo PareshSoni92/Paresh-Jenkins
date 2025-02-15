@@ -41,7 +41,7 @@ environment {
             steps {
 
                 echo "Validating the config"
-
+                 bat 'terraform validate'
             }
             
         }
