@@ -40,7 +40,8 @@ environment {
         stage("Validate") {
 
             when {
-                 ${currentBuild.currentResult} 'Success'
+                expression {${currentBuild.currentResult} == 'Success'}
+                 
             }
 
             environment {
