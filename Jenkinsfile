@@ -28,7 +28,7 @@ environment {
             steps {
 
                 echo "perform fmt"
-
+                bat 'terraform fmt'
             }
             
         }
