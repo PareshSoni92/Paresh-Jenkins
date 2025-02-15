@@ -30,7 +30,7 @@ environment {
     
                 echo "perform fmt"
                 bat 'terraform fmt'
-                echo "${currentBuild}"
+                echo "${currentBuild.currentResult}"
 }
                
             }
@@ -45,8 +45,9 @@ environment {
             steps {
 
                 echo "Validating the config"
-                echo "${currentBuild}"
+                
                  bat 'terraform validate'
+                 echo "${currentBuild.currentResult}"
             }
         }
         stage("Plan") {
