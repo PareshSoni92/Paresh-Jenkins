@@ -16,7 +16,7 @@ environment {
             steps {
 
                 echo "Running INIT command"
-
+                sh 'terraform init'
             }
 
         }
