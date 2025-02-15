@@ -43,7 +43,7 @@ environment {
                 echo "Validating the config"
                  bat 'terraform validate'
             }
-
+        }
              stage("Plan") {
             environment {
                 phase = "Plan"
@@ -56,7 +56,6 @@ environment {
             }
         }
 
-    }
 
 
 
