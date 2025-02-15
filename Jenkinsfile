@@ -26,9 +26,13 @@ environment {
             }
 
             steps {
-
+             catchError(message: 'Checking Terraform Fmt') {
+    
                 echo "perform fmt"
                 bat 'terraform fmt'
+                echo "${currentBuild}"
+}
+               
             }
             
         }
@@ -41,6 +45,7 @@ environment {
             steps {
 
                 echo "Validating the config"
+                echo "${currentBuild}"
                  bat 'terraform validate'
             }
         }
