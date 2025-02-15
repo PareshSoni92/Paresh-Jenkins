@@ -29,7 +29,7 @@ environment {
              catchError(message: 'Checking Terraform Fmt') {
     
                 echo "perform fmt"
-                bat 'terraform fmt'
+                bat 'terraform fmt -check'
                 echo "${currentBuild.currentResult}"
 }
                
